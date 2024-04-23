@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    z-index: 100;
+
+}
+header .logo img{
+   max-width: 100px; 
+   transition: 7s;
+  
+ 
+}
+header .logo:hover img{
+   transform: rotate(360deg);
+  transition:5s ;
+ 
+}
+.navigation{
+    display: flex;
+}
+.navigation li {
+    /* display: inline-block; */
+    list-style: none;
+    margin:0  10px;
+   
+}
+.navigation li a{
+    font-size: 1.2em;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+.navigation li:hover a{
+    color: rgb(234, 74, 52);
+   
+}
+
+
+.search{
+    position: absolute;
+    right: 0;
+    top: 300px;
+    width: 300px;
+    height: 40px;
+
+}
+.search input{
+    color: #fff;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    border-left: none;
+    border-radius: 2em;
+    text-align: center;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgb(245, 34, 34);
+    backdrop-filter: blur(150px);
+}
+.search .fa-search{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    padding-right: 10px;
+    border-right:1px solid azure ;
+
+}
+.search input::placeholder{
+    color: #fff;
+    
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.banner .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+    position: relative;
+    margin-top: 100px;
+    z-index: 1;
+    max-width: 650px;
+}
+.content h2{
+    color: #fff;
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.banner .content h4{
+    color: #f5f2f2;
+    font-weight: bolder;
+}
+.banner .content h4 span{
+    padding: 0 10px;
+    border-right: 1px solid rgb(255, 255, 255,0.5);
+}
+.banner .content h4 span:first-child{
+    padding-left: 0;
+}
+.banner .content h4 span:last-child{
+    padding-right: none;
+}
+.banner .content h4 span i{
+    background-color: rgb(242, 18, 18);
+    color: #fff;
+    padding: 0 8px;
+    display: inline-block;
+    font-size: normal;
+    border-radius: 2em;
+    text-align: center;
+}
+p{
+    margin-top: 20px;
+    color: #f5f2f2;
+    line-height: 32px;
+    font-weight: 500;
+}
+.banner .content .buttons {
+    position: relative;
+}
+.banner .content .buttons a{
+    /* position: relative; */
+    display: inline-block;
+    margin-right: 10px;
+    background: rgb(207, 15, 15);
+    color: #fff;
+    padding:14px 30px ;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0,.7) ;
+    border: 0.1rem solid rgb(0, 0, 0,.7)  ;
+    border-radius: 2em;
+    margin: 20px;
+    transition: 2s;
+}
+.banner .content .buttons a:hover{
+color: black;
+}
+@media (max-width :1123px){
+header{
+    padding: 5px 10px;
+
+}
+}
+@media(max-width:943px){
+    .search{
+        position: absolute;
+        left: 27%;
+        top: 200px;
+        width: 400px;
+        height: 40px;
+    
+    }
+    header{
+        display: flex;
+        padding: 0;
+    }
+    .bg{
+        width: 20px;
+    }
+    .search{
+       
+        width: 150px;
+        height: 40px;
+    
+    }
+    .navigation{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+@media(max-width:562px){
+.navigation{
+    display: block;
+    padding: 10px;
+
+}
+
+.content{
+    margin-top: 263px;
+}
+}
+
+@media (max-width: 768px) {
+    header {
+      padding: 5px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .search {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 2em;
+    }
+  
+    .search input {
+      width: 100%;
+      color: #fff;
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+  
+    .search .fa-search {
+      position: absolute;
+      color: #fff;
+         top: 78%;
+    left: 31px;
+      transform: translateY(-50%);
+      padding-right: 10px;
+      border-right: 1px solid azure;
+    }
+  
+    .banner {
+      padding: 0 10px;
+    }
+  
+    .bg {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  
+    .content {
+      margin-top: 263px;
+    }
+  
+   
+        .navigation {
+            margin: 40px;
+            display: block;
+            padding: 10px;
+        }
+   
+  
+    .navigation li {
+      display: inline-block;
+    }
+  
+    .navigation li a {
+      padding: 10px;
+    }
+  }
+  
